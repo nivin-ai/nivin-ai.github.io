@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivin - Portfolio</title>
+    <title>Portfolio</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f0f2f5; /* Facebook's background color */
-            color: #333;
+            font-family: 'Roboto Mono', monospace; /* Techy font style */
+            background-color: #1a1a1a; /* Dark background */
+            color: #f0f2f5;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,45 +18,48 @@
             flex-direction: column;
         }
         h1 {
-            color: #4267B2; /* Facebook's blue */
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            color: #00FFCC; /* Neon cyan */
+            font-size: 3rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            margin: 25px 0;
+            margin: 30px 0;
         }
         a {
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 12px 30px;
-            border-radius: 30px; /* Instagram's rounded button style */
-            background: linear-gradient(45deg, #4267B2, #1877F2); /* Facebook's color gradient */
-            color: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.3rem;
+            padding: 15px 40px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #00FFCC, #0088FF); /* Neon gradient */
+            color: #1a1a1a; /* Dark text for contrast */
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             display: inline-block;
         }
         a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.5);
+            background: linear-gradient(45deg, #0088FF, #00FFCC); /* Reverse gradient on hover */
         }
         /* Responsive styling */
         @media (max-width: 600px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             a {
-                font-size: 1rem;
-                padding: 10px 20px;
+                font-size: 1.1rem;
+                padding: 12px 30px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Nivin - Portfolio</h1>
+    <h1>Portfolio</h1>
     <ul>
         <li><a href="https://ann-classification-project-mgdnwol6dqqe7mmgnbbjju.streamlit.app/" target="_blank">ANN Classification</a></li>
         <li><a href="https://ann-regression-project-sfcehgikk4us4hgdugxgdh.streamlit.app/" target="_blank">ANN Regression</a></li>
@@ -65,3 +68,4 @@
     </ul>
 </body>
 </html>
+
