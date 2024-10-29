@@ -25,7 +25,7 @@
         .sidebar {
             width: 250px;
             height: 100vh;
-            background: linear-gradient(135deg, #2B2D42, #8D99AE); /* Subtle gradient for modern look */
+            background: linear-gradient(135deg, #2B2D42, #8D99AE);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -47,12 +47,6 @@
             color: #D9E1E8;
             text-align: center;
         }
-        .sidebar nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
         .sidebar nav a {
             color: #EDF2F4;
             text-decoration: none;
@@ -67,18 +61,79 @@
             color: #EF233C;
             box-shadow: inset 5px 0px 0px #EF233C;
         }
-        .sidebar nav a.active {
-            background: #2B2D42;
-            color: #EF233C;
-            box-shadow: inset 5px 0px 0px #EF233C;
-        }
 
         /* Main Content Styles */
         .content {
             margin-left: 250px;
             padding: 40px;
             width: calc(100% - 250px);
+            background-color: #ffffff;
+            color: #2B2D42;
         }
+        .content section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+        }
+        .content h2 {
+            font-size: 1.8rem;
+            color: #2B2D42;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #8D99AE;
+            padding-bottom: 5px;
+        }
+        .content p,
+        .content ul {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .content ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .project-card, .experience-item {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border-left: 4px solid #8D99AE;
+        }
+        .project-card h3, .experience-item h3 {
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .project-card a, .experience-item a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #4267B2;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #2B2D42;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #EF233C;
+        }
+
         /* Responsive styling for sidebar */
         @media (max-width: 600px) {
             .sidebar {
@@ -115,8 +170,6 @@
         <a href="#contact">Contact</a>
     </nav>
 </div>
-
-
 
 <!-- Main Content -->
 <div class="content">
