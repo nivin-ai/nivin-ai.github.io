@@ -3,69 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Data Science Portfolio - [Your Name]</title>
     <style>
         body {
-            font-family: 'Roboto Mono', monospace; /* Techy font style */
-            background-color: #1a1a1a; /* Dark background */
-            color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
         }
-        h1 {
-            color: #00FFCC; /* Neon cyan */
-            font-size: 3rem;
+        header {
+            background-color: #4267B2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #4267B2;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .skills, .projects, .experience, .education, .contact {
             margin-bottom: 40px;
-            letter-spacing: 2px;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
-        li {
-            margin: 30px 0;
+        ul li {
+            background: #f0f2f5;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
         a {
+            color: #4267B2;
             text-decoration: none;
-            font-size: 1.3rem;
-            padding: 15px 40px;
-            border-radius: 30px;
-            background: linear-gradient(45deg, #00FFCC, #0088FF); /* Neon gradient */
-            color: #1a1a1a; /* Dark text for contrast */
             font-weight: bold;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            display: inline-block;
         }
         a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.5);
-            background: linear-gradient(45deg, #0088FF, #00FFCC); /* Reverse gradient on hover */
+            text-decoration: underline;
         }
-        /* Responsive styling */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            a {
-                font-size: 1.1rem;
-                padding: 12px 30px;
-            }
+        .project-item {
+            margin-bottom: 20px;
+        }
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4267B2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background-color: #365899;
         }
     </style>
 </head>
 <body>
-    <h1>Portfolio</h1>
+
+<header>
+    <h1>[Your Name]</h1>
+    <p>Data Scientist | Machine Learning Enthusiast | AI Researcher</p>
+</header>
+
+<section class="intro">
+    <h2>About Me</h2>
+    <p>Welcome! I’m a passionate data scientist with experience in building predictive models, data visualization, and machine learning. I enjoy leveraging data to derive insights and drive decisions. This portfolio showcases my expertise in data science and some of the projects I have worked on.</p>
+</section>
+
+<section class="skills">
+    <h2>Skills</h2>
     <ul>
-        <li><a href="https://ann-classification-project-mgdnwol6dqqe7mmgnbbjju.streamlit.app/" target="_blank">ANN Classification</a></li>
-        <li><a href="https://ann-regression-project-sfcehgikk4us4hgdugxgdh.streamlit.app/" target="_blank">ANN Regression</a></li>
-        <li><a href="https://lstm-rnn-next-word-prediction-togvj6csgafwhiopbbr5vf.streamlit.app/" target="_blank">LSTM RNN - Next Word Prediction</a></li>
-        <li><a href="https://rnn-sentiment-analysis-5h6hvcsvov2qgga4v6oqz9.streamlit.app/" target="_blank">RNN - Sentiment Analysis</a></li>
+        <li>Programming Languages: Python, R, SQL</li>
+        <li>Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn</li>
+        <li>Machine Learning: Scikit-Learn, TensorFlow, Keras</li>
+        <li>Deep Learning: Neural Networks, CNN, RNN, LSTM</li>
+        <li>Big Data Tools: Hadoop, Spark</li>
+        <li>Database Management: MySQL, MongoDB</li>
     </ul>
+</section>
+
+<section class="projects">
+    <h2>Projects</h2>
+    <div class="project-item">
+        <h3>Customer Churn Prediction</h3>
+        <p>Developed a model to predict customer churn using logistic regression and decision trees. The model helped in retaining customers with targeted marketing strategies.</p>
+        <a href="https://github.com/your-github-username/churn-prediction" target="_blank">GitHub Repository</a>
+    </div>
+    <div class="project-item">
+        <h3>Image Classification with CNN</h3>
+        <p>Built a Convolutional Neural Network to classify images into different categories with an accuracy of over 90% on the CIFAR-10 dataset.</p>
+        <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+    </div>
+</section>
+
+<section class="experience">
+    <h2>Experience</h2>
+    <ul>
+        <li>
+            <h3>Data Scientist - [Company Name]</h3>
+            <p>Developed predictive models and performed data analysis to enhance business insights, leading to a 15% increase in customer satisfaction.</p>
+        </li>
+        <li>
+            <h3>Data Analyst Intern - [Company Name]</h3>
+            <p>Assisted in data preprocessing and analysis for a large-scale project, which improved data pipeline efficiency by 25%.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="education">
+    <h2>Education</h2>
+    <ul>
+        <li><strong>Master's in Data Science</strong> - [University Name]</li>
+        <li><strong>Bachelor's in Computer Science</strong> - [University Name]</li>
+        <li><strong>Certifications:</strong> IBM Data Science Professional Certificate, Google Data Analytics Certificate</li>
+    </ul>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> or check out my <a href="https://github.com/your-github" target="_blank">GitHub</a>.</p>
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </div>
+</section>
+
 </body>
 </html>
-
