@@ -3,80 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Portfolio - [Your Name]</title>
+    <title>[Your Name] | Data Scientist</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        /* Reset and Base Styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #4267B2;
-            color: white;
-            padding: 20px;
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            color: #333;
+            background: #f0f2f5;
+        }
+        h1, h2 {
+            color: #4267B2;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            position: fixed;
+        }
+        .sidebar h1 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        .sidebar nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            transition: color 0.3s;
+        }
+        .sidebar nav a:hover {
+            color: #fff;
+        }
+        
+        /* Main Content Styles */
+        .content {
+            margin-left: 220px;
+            padding: 40px;
+            width: calc(100% - 220px);
         }
         section {
+            margin-bottom: 60px;
+        }
+        
+        /* Skills and Project Cards */
+        .skills ul, .projects .project-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skills li, .project-card {
+            background: #fff;
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h2 {
-            color: #4267B2;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .skills, .projects, .experience, .education, .contact {
-            margin-bottom: 40px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background: #f0f2f5;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        a {
-            color: #4267B2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .project-item {
-            margin-bottom: 20px;
-        }
-        .project-item img {
-            width: 100%;
-            height: auto;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
+        .skills li:hover, .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .skills li {
+            font-size: 1rem;
+            flex: 1 1 150px;
+            text-align: center;
+        }
+        .project-card {
+            flex: 1 1 calc(50% - 10px);
+            text-align: left;
+            padding: 20px;
+            border-left: 5px solid #4267B2;
+        }
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Form */
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ddd;
             border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
         }
         .contact-form button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #4267B2;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
+            transition: background 0.3s;
         }
         .contact-form button:hover {
             background-color: #365899;
@@ -85,75 +121,88 @@
 </head>
 <body>
 
-<header>
+<!-- Sidebar -->
+<div class="sidebar">
     <h1>[Your Name]</h1>
-    <p>Data Scientist | Machine Learning Enthusiast | AI Researcher</p>
-</header>
+    <p>Data Scientist</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
 
-<section class="intro">
-    <h2>About Me</h2>
-    <p>Welcome! I’m a passionate data scientist with experience in building predictive models, data visualization, and machine learning. I enjoy leveraging data to derive insights and drive decisions. This portfolio showcases my expertise in data science and some of the projects I have worked on.</p>
-</section>
+<!-- Main Content -->
+<div class="content">
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I’m a data scientist with expertise in machine learning, data visualization, and predictive modeling. I’m passionate about leveraging data to drive meaningful insights and innovation. This portfolio showcases some of my skills, projects, and experience in data science.</p>
+    </section>
 
-<section class="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Programming Languages: Python, R, SQL</li>
-        <li>Data Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn</li>
-        <li>Machine Learning: Scikit-Learn, TensorFlow, Keras</li>
-        <li>Deep Learning: Neural Networks, CNN, RNN, LSTM</li>
-        <li>Big Data Tools: Hadoop, Spark</li>
-        <li>Database Management: MySQL, MongoDB</li>
-    </ul>
-</section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Data Visualization</li>
+            <li>Big Data: Hadoop, Spark</li>
+            <li>Database Management</li>
+        </ul>
+    </section>
 
-<section class="projects">
-    <h2>Projects</h2>
-    <div class="project-item">
-        <h3>Customer Churn Prediction</h3>
-        <p>Developed a model to predict customer churn using logistic regression and decision trees. The model helped in retaining customers with targeted marketing strategies.</p>
-        <a href="https://github.com/your-github-username/churn-prediction" target="_blank">GitHub Repository</a>
-    </div>
-    <div class="project-item">
-        <h3>Image Classification with CNN</h3>
-        <p>Built a Convolutional Neural Network to classify images into different categories with an accuracy of over 90% on the CIFAR-10 dataset.</p>
-        <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
-    </div>
-</section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Customer Churn Prediction</h3>
+                <p>Developed a model to predict customer churn using logistic regression and decision trees, enabling targeted marketing and customer retention strategies.</p>
+                <a href="https://github.com/your-github-username/churn-prediction" target="_blank">GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Image Classification with CNN</h3>
+                <p>Built a Convolutional Neural Network that classifies images with high accuracy, applying it to the CIFAR-10 dataset.</p>
+                <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+            </div>
+        </div>
+    </section>
 
-<section class="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
             <h3>Data Scientist - [Company Name]</h3>
-            <p>Developed predictive models and performed data analysis to enhance business insights, leading to a 15% increase in customer satisfaction.</p>
-        </li>
-        <li>
+            <p>Developed predictive models, resulting in a 20% increase in customer engagement through tailored marketing campaigns.</p>
+        </div>
+        <div class="experience-item">
             <h3>Data Analyst Intern - [Company Name]</h3>
-            <p>Assisted in data preprocessing and analysis for a large-scale project, which improved data pipeline efficiency by 25%.</p>
-        </li>
-    </ul>
-</section>
+            <p>Worked on data pipelines, increasing efficiency by 25% for a large-scale data project.</p>
+        </div>
+    </section>
 
-<section class="education">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Master's in Data Science</strong> - [University Name]</li>
-        <li><strong>Bachelor's in Computer Science</strong> - [University Name]</li>
-        <li><strong>Certifications:</strong> IBM Data Science Professional Certificate, Google Data Analytics Certificate</li>
-    </ul>
-</section>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>Master's in Data Science - [University Name]</li>
+            <li>Bachelor's in Computer Science - [University Name]</li>
+            <li>Certifications: IBM Data Science Certificate, Google Data Analytics Certificate</li>
+        </ul>
+    </section>
 
-<section class="contact">
-    <h2>Contact</h2>
-    <p>Connect with me on <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> or check out my <a href="https://github.com/your-github" target="_blank">GitHub</a>.</p>
-    <div class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-    </div>
-</section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+    </section>
+</div>
 
 </body>
 </html>
