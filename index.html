@@ -21,143 +21,114 @@
             background: #f0f2f5;
         }
         
-        /* Sidebar Styles (Untouched) */
+        /* Sidebar Styles */
         .sidebar {
-            width: 250px;
+            width: 220px;
             height: 100vh;
-            background: linear-gradient(135deg, #2B2D42, #8D99AE);
-            color: #fff;
+            background: #ffffff;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding-top: 40px;
             position: fixed;
-            box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
         }
         .sidebar h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            color: #2B2D42;
             margin-bottom: 20px;
             text-align: center;
-            font-weight: 700;
-            color: #EDF2F4;
         }
-        .sidebar p {
-            font-size: 1rem;
-            margin-bottom: 40px;
-            color: #D9E1E8;
-            text-align: center;
+        .sidebar .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #2B2D42;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
         }
         .sidebar nav a {
-            color: #EDF2F4;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 15px 0;
             width: 100%;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
             transition: all 0.3s;
         }
+        .sidebar nav a.active,
         .sidebar nav a:hover {
-            background: #2B2D42;
+            background-color: #f0f2f5;
+            color: #2B2D42;
+            font-weight: 700;
+        }
+        .sidebar nav a .icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .sidebar nav a .notification {
+            margin-left: auto;
+            font-size: 0.9rem;
             color: #EF233C;
-            box-shadow: inset 5px 0px 0px #EF233C;
+            font-weight: 700;
         }
 
         /* Main Content Styles */
         .content {
-            margin-left: 250px;
+            margin-left: 220px;
             padding: 40px;
-            width: calc(100% - 250px);
-            background-color: #ffffff;
-            color: #2B2D42;
-        }
-        .content section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background: #ffffff;
-        }
-        .content h2 {
-            font-size: 1.8rem;
-            color: #2B2D42;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #8D99AE;
-            padding-bottom: 5px;
-        }
-        .content p,
-        .content ul {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-            margin-top: 10px;
-        }
-        .content ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-        .project-card, .experience-item {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            background: #f8f9fa;
-            border-left: 4px solid #8D99AE;
-        }
-        .project-card h3, .experience-item h3 {
-            font-size: 1.4rem;
-            color: #333;
-        }
-        .project-card a, .experience-item a {
-            display: inline-block;
-            margin-top: 8px;
-            color: #4267B2;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #2B2D42;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .contact-form button:hover {
-            background-color: #EF233C;
-        }
-
-        /* Responsive styling for content */
-        @media (max-width: 600px) {
-            .content {
-                margin-left: 100px;
-                width: calc(100% - 100px);
-            }
+            width: calc(100% - 220px);
         }
     </style>
 </head>
 <body>
 
-<!-- Sidebar (Untouched) -->
+<!-- Sidebar -->
 <div class="sidebar">
+    <div class="logo">N</div>
     <h1>Nivin Sebastian</h1>
-    <p>Data Science | ML | AI</p>
     <nav>
-        <a href="#about" class="active">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#dashboard" class="active">
+            <span class="icon">🏠</span> Dashboard
+        </a>
+        <a href="#activity">
+            <span class="icon">📈</span> Activity
+        </a>
+        <a href="#messages">
+            <span class="icon">💬</span> Messages <span class="notification">13</span>
+        </a>
+        <a href="#teams">
+            <span class="icon">👥</span> Teams
+        </a>
+        <a href="#tickets">
+            <span class="icon">🎫</span> Tickets
+        </a>
+        <a href="#statistics">
+            <span class="icon">📊</span> Statistics
+        </a>
+        <a href="#income">
+            <span class="icon">💰</span> Income
+        </a>
+        <a href="#settings">
+            <span class="icon">⚙️</span> Settings
+        </a>
     </nav>
 </div>
+
 
 <!-- Main Content -->
 <div class="content">
