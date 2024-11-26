@@ -3,196 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Data Scientist Portfolio</title>
+    <title>Data Science Profile</title>
     <style>
-        /* Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            color: #333;
-            background: #f0f2f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
-        
-        /* Sidebar Styles */
-        .sidebar {
-            width: 220px;
-            height: 100vh;
-            background: #ffffff;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 40px;
-            position: fixed;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .sidebar h1 {
-            font-size: 1.5rem;
-            color: #2B2D42;
-            margin-bottom: 20px;
+        .header {
+            background-color: #222;
+            color: white;
+            padding: 1rem;
             text-align: center;
         }
-        .sidebar .logo {
-            width: 50px;
-            height: 50px;
-            background-color: #2B2D42;
-            border-radius: 10px;
+        .container {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            padding: 2rem;
         }
-        .sidebar nav {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            width: 100%;
+        .tile {
+            background-color: white;
+            width: 300px;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .sidebar nav a {
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tile img {
             width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 12px 20px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .tile-content {
+            padding: 1rem;
+        }
+        .tile-content h3 {
+            margin: 0 0 0.5rem;
             color: #333;
+        }
+        .tile-content p {
+            margin: 0;
+            color: #666;
+        }
+        .tile-content a {
+            display: inline-block;
+            margin-top: 0.5rem;
             text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
+            color: #0066cc;
         }
-        .sidebar nav a.active,
-        .sidebar nav a:hover {
-            background-color: #f0f2f5;
-            color: #2B2D42;
-            font-weight: 700;
-        }
-        .sidebar nav a .icon {
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-        .sidebar nav a .notification {
-            margin-left: auto;
-            font-size: 0.9rem;
-            color: #EF233C;
-            font-weight: 700;
-        }
-
-        /* Main Content Styles */
-        .content {
-            margin-left: 220px;
-            padding: 40px;
-            width: calc(100% - 220px);
+        .tile-content a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<!-- Sidebar -->
-<div class="sidebar">
-    <div class="logo">N</div>
-    <h1>Nivin Sebastian</h1>
-    <nav>
-        <a href="#about" class="active">
-            <span class="icon"><i class="fas fa-user"></i></span> About Me
-        </a>
-        <a href="#skills">
-            <span class="icon"><i class="fas fa-tools"></i></span> Skills
-        </a>
-        <a href="#projects">
-            <span class="icon"><i class="fas fa-project-diagram"></i></span> Projects
-        </a>
-        <a href="#experience">
-            <span class="icon"><i class="fas fa-briefcase"></i></span> Experience
-        </a>
-        <a href="#education">
-            <span class="icon"><i class="fas fa-graduation-cap"></i></span> Education
-        </a>
-        <a href="#contact">
-            <span class="icon"><i class="fas fa-envelope"></i></span> Contact
-        </a>
-    </nav>
-</div>
-
-
-<!-- Main Content -->
-<div class="content">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I’m a data scientist with expertise in machine learning, data visualization, and predictive modeling. I’m passionate about leveraging data to drive meaningful insights and innovation. This portfolio showcases some of my skills, projects, and experience in data science.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>R</li>
-            <li>SQL</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>Data Visualization</li>
-            <li>Big Data: Hadoop, Spark</li>
-            <li>Database Management</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Customer Churn Prediction</h3>
-                <p>Developed a model to predict customer churn using logistic regression and decision trees, enabling targeted marketing and customer retention strategies.</p>
-                <a href="https://github.com/your-github-username/churn-prediction" target="_blank">GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Image Classification with CNN</h3>
-                <p>Built a Convolutional Neural Network that classifies images with high accuracy, applying it to the CIFAR-10 dataset.</p>
-                <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+    <div class="header">
+        <h1>My Data Science Projects</h1>
+        <p>Explore my work and contributions to data science!</p>
+    </div>
+    <div class="container">
+        <!-- Example tile 1 -->
+        <div class="tile">
+            <img src="https://via.placeholder.com/300x150" alt="Project Thumbnail">
+            <div class="tile-content">
+                <h3>Project Title 1</h3>
+                <p>Short description of the project goes here.</p>
+                <a href="#">View Project</a>
             </div>
         </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Data Scientist - [Company Name]</h3>
-            <p>Developed predictive models, resulting in a 20% increase in customer engagement through tailored marketing campaigns.</p>
+        <!-- Example tile 2 -->
+        <div class="tile">
+            <img src="https://via.placeholder.com/300x150" alt="Project Thumbnail">
+            <div class="tile-content">
+                <h3>Project Title 2</h3>
+                <p>Short description of the project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
         </div>
-        <div class="experience-item">
-            <h3>Data Analyst Intern - [Company Name]</h3>
-            <p>Worked on data pipelines, increasing efficiency by 25% for a large-scale data project.</p>
+        <!-- Example tile 3 -->
+        <div class="tile">
+            <img src="https://via.placeholder.com/300x150" alt="Project Thumbnail">
+            <div class="tile-content">
+                <h3>Project Title 3</h3>
+                <p>Short description of the project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
         </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>Master's in Data Science - [University Name]</li>
-            <li>Bachelor's in Computer Science - [University Name]</li>
-            <li>Certifications: IBM Data Science Certificate, Google Data Analytics Certificate</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </div>
-    </section>
-</div>
-
+        <!-- Add more tiles as needed -->
+    </div>
 </body>
 </html>
